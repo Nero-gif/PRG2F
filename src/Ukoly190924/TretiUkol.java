@@ -7,7 +7,7 @@ public class TretiUkol {
         int cislo1 = sc.nextInt();
         int cislo2 = sc.nextInt();
         int cislo3 = sc.nextInt();
-        boolean IDK;
+        boolean IDK = false;
         if (cislo1+cislo2+cislo3 == 300) {
             IDK = true;
         }
