@@ -8,8 +8,13 @@ public class RandomNVM {
         int MIN = sc.nextInt();
         int MAX = sc.nextInt();
 
+        if (MAX < MIN) {
+            int NVM = MIN;
+            MIN = MAX;
+            MAX= NVM;
         Random rng = new Random();
         int vysledek = rng.nextInt(MIN, MAX);
         System.out.println(vysledek);
     }
-}
+
+}}
