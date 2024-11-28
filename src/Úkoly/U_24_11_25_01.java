@@ -11,18 +11,18 @@ public class U_24_11_25_01 {
         System.out.println("Zadejte přijímení");
         String prijimeni = sc.next();
 
-        String out;
+        String out = "";
 
-        out = String.valueOf(jmeno.charAt(2));
+        for (int i = jmeno.length()-1; i >= 0; i--) {
+            out = out + jmeno.charAt(i);
+        }
+        out = out + " ";
 
-        for (int i = jmeno.length(); i > 0; i--) {
-            out = out + jmeno.valueOf(i);
+        for (int i = prijimeni.length()-1; i >= 0; i--) {
+            out = out + prijimeni.charAt(i);
         }
 
-        System.out.println(out);
-        System.out.println(jmeno+prijimeni);
-
-
+        System.out.println(out.toUpperCase());
 
     }
 }
