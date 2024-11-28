@@ -13,16 +13,15 @@ public class U_24_11_25_01 {
 
         String out = "";
 
-        for (int i = jmeno.length()-1; i >= 0; i--) {
+        for (int i = jmeno.length() - 1; i >= 0; i--) {
             out = out + jmeno.charAt(i);
         }
         out = out + " ";
 
-        for (int i = prijimeni.length()-1; i >= 0; i--) {
+        for (int i = prijimeni.length() - 1; i >= 0; i--) {
             out = out + prijimeni.charAt(i);
         }
 
         System.out.println(out.toUpperCase());
-
     }
 }
