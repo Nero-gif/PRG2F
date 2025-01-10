@@ -2,7 +2,7 @@ package Ukoly;
 
 import java.util.Scanner;
 
-public class O_25_01_09_01 {
+public class U_25_01_09_01 {
 
         static void validatePassword(String password) {
             boolean isValid = true;
