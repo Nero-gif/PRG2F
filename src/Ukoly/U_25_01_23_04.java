@@ -23,5 +23,7 @@ public class U_25_01_23_04 {
         int result = sumOfDigits(number);
 
         System.out.println("Součet číslic čísla " + number + " je: " + result);
+
+        //tihle je test
     }
 }
