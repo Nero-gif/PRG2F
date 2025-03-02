@@ -13,7 +13,6 @@ public class U_25_01_23_03 {
         for (int i = 0; i < 3; i++) {
             nick = nick + prij.charAt(i);
         }
-
         return nick;
     }
     public static void main(String[] args) {
