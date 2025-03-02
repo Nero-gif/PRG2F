@@ -47,13 +47,13 @@ public class U_25_03_02_01 {
             System.out.println("Zvolte akci:");
             System.out.println("1 = Zadat 4 nové songy");
             System.out.println("2 = Vypsat inventář");
-            System.out.println("3 = Vypsat inventář podle abecedy");
-            System.out.println("4 = Vypsat inventář podle rarity");
+            System.out.println("3 = Seřadit a vypsat inventář podle abecedy");
+            System.out.println("4 = Seřadit a vypsat inventář podle rarity");
             int akce = sc.nextInt();
 
             if (akce == 1) {
-                inventory = AddItem(sc, inventory);
-                rarity = AddRarity(sc, rarity, inventory.length - 4, inventory.length);
+                inventory = AddItem(inventory);
+                rarity = AddRarity(sc, inventory, rarity, inventory.length - 4, inventory.length);
             } else if (akce == 2) {
                 printInventory(inventory, rarity);
             } else if (akce == 3) {
@@ -81,7 +81,8 @@ public class U_25_03_02_01 {
         }
     }
 
-    private static String[] AddItem(Scanner sc, String[] inventory) {
+    private static String[] AddItem(String[] inventory) {
+        Scanner sc = new Scanner(System.in);
         for (int i = 0; i < 4; i++) {
             System.out.println("Zadejte název nového songu:");
             String newItem = sc.nextLine();
@@ -92,12 +93,12 @@ public class U_25_03_02_01 {
         return inventory;
     }
 
-    private static char[] AddRarity(Scanner sc, char[] rarity, int startIndex, int endIndex) {
+    private static char[] AddRarity(Scanner sc, String[] inventory, char[] rarity, int startIndex, int endIndex) {
         char[] newRarity = Arrays.copyOf(rarity, endIndex);
 
         for (int i = startIndex; i < endIndex; i++) {
-            System.out.println("Zadejte raritu pro položku " + newRarity[i] + " (A-E):");
-            char newRarityValue = sc.next().charAt(0);
+            System.out.println("Zadejte raritu pro položku " + inventory[i] + " (A-E):");
+            char newRarityValue = sc.next().toUpperCase().charAt(0);
             sc.nextLine();
             newRarity[i] = newRarityValue;
         }
