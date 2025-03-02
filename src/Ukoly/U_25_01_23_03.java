@@ -3,7 +3,7 @@ package Ukoly;
 import java.util.Scanner;
 
 public class U_25_01_23_03 {
-    static void validateNick(String nick, String jmeno, String prij){
+    static String validateNick(String nick, String jmeno, String prij){
         String idk = String.valueOf(123456789);
         jmeno = jmeno + idk;
         prij = prij +idk;
@@ -13,7 +13,8 @@ public class U_25_01_23_03 {
         for (int i = 0; i < 3; i++) {
             nick = nick + prij.charAt(i);
         }
-        System.out.println("Doporučený nick je "+nick);
+
+        return nick;
     }
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
@@ -25,7 +26,9 @@ public class U_25_01_23_03 {
 
         String nick = "";
 
-        validateNick(nick, jmeno, prij);
+        nick = validateNick(nick, jmeno, prij);
+
+        System.out.println("Doporučený nick je "+nick);
     }
 
 }
