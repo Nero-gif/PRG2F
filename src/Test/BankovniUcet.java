@@ -37,6 +37,7 @@ public class BankovniUcet {
                     ". Nový zůstatek: " + zustatek + " " + mena);
         }
     }
+
     public static void main(String[] args) {
         BankovniUcet ucet = new BankovniUcet("123456789");
         ucet.vklad(1000);
